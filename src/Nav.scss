@@ -1,0 +1,342 @@
+.nav {
+    background: #FFFAFA;
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 0;
+
+
+    .title {
+        display: flex;
+        align-items: center;
+        color: #111;
+        font-size: 2rem;
+        text-decoration: none;
+        margin-left: 4rem;
+
+        svg {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+        }
+    }
+
+    #links {
+        display: flex;
+        
+        
+        
+    }
+    .arrow{
+        position: absolute;
+        font-size: 25px;
+        color: #111;
+        top: 35px;
+        right: 5px;
+        display: none;
+    }
+    
+
+    .nav-link {
+        justify-content: space-around;
+        // padding:1px 5px;
+        margin-left: 3rem;
+        position: relative;
+        .inner-link svg{
+            transition: 0.25s;
+        }
+        &:hover{
+            .arrow{
+                display: block;
+            }
+            .nav-megamenu{
+                display: flex;
+            }
+            .inner-link svg{
+                transform: rotate(-180deg);
+            }
+        }
+        
+    }
+
+
+    .inner-link {
+        font-size: 18px;
+        color: #111;
+        display: flex;
+        align-items: center;
+        
+        text-decoration: none;
+    }
+    #auth{
+        
+        margin-right: 6rem;    
+        align-items: center;
+       
+    }
+
+    #auth a {
+        font-size: 18px;
+        color: #111;
+        padding: 14px 30px;
+        border-radius: 25px;
+        text-decoration: none; 
+
+    }
+
+    .sign-up {
+        background: #111;
+        color: #fff !important;    
+        // color: white;
+    }
+
+    .sign-up a{
+        color: #fff;
+    }
+
+    .nav-megamenu{
+    
+        background: #fff;
+        left: -150px;
+        top: 50px;
+        position: absolute;
+        width: 675px;
+        border-radius: 10px;
+        padding: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border: 1px solid #eee;
+        display: none;
+        z-index: 10;
+        .menu-link{
+           text-decoration: none;
+            width:45%;    
+            margin:10px 0;
+            border-radius: 7.5px;
+           
+            &:hover{
+                background: #427cff;
+               
+                h6 , p {
+                    color: #fff;
+                }
+                .icon{
+                    background: #fff;
+                }
+            }    
+        }
+        .menu-link a{
+            padding: 10px 15px;   
+            display: flex;
+            align-items: center;
+        }
+        .icon{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-right: 15px;  
+            color:#427cff   
+        }
+        h6{
+            font-size: 18px;
+            color:#111;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 18px;
+            color:#111;
+            padding-bottom: 10px;
+        }
+    }
+  
+}
+
+.menu{
+    
+    visibility: hidden;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    width: 2.5rem;
+    height: 2rem;
+}
+
+.nav .menu span{
+    height: 0.4rem;
+    width: 100%;
+    background-color: #111;
+    border-radius: 0.2rem;
+}
+
+
+@media(max-width:1400px){
+    .nav .menu{
+        display: flex;
+        visibility: visible;
+        align-items: center;
+        margin-right: 2rem;
+        margin-top: 1.25rem;
+    }
+
+    .nav{
+        flex-direction: column;
+        align-items:center;
+        width: 100%;
+        position: relative;
+    }
+
+     .nav #links{
+        display: none;
+        flex-direction: column;
+        border: 1px solid black;
+        left: -10.5rem;
+        width: 30%;
+        height: 23rem;
+        margin-bottom: 0.25;
+        position: absolute;
+        top: 5rem;
+        margin-left: 7rem;
+        text-align: center;
+        // align-items: start;
+        background-color: #FFFAFA;
+    }
+    .nav .title{
+        margin-top: 1.5rem;
+        margin-right: 5rem;
+    }
+
+    .nav #auth{
+        display: none;
+        flex-wrap: wrap;
+        margin-top: 2.5rem;
+        background-color: #FFFAFA;
+        position: absolute;
+        top: 21.5rem;
+        left: 6.7rem;
+        width: fit-content;
+        flex-direction: column;
+    }
+   .nav #auth a {
+        font-size: 18px;
+        align-items: center;
+        color: #111;
+        margin: 0;
+        // position: absolute;
+      
+        
+        border-radius: 25px;
+        text-decoration: none; 
+
+    }
+
+    .nav #links.open{
+         display: flex;
+         text-align: start;
+         margin-top: 20px;
+        
+    }
+
+    .nav #auth.open{
+        display: flex;
+        text-align: start;
+        margin-top: 20px;
+   }
+
+   .nav-link{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    border: 1px solid black;
+    padding: 10px;
+   }
+}
+   @media(max-width:1300px){
+    .nav #auth{
+        top: 21.5rem;
+        left:5rem;
+   }
+}
+   @media(max-width:1200px){
+    .nav #auth{
+        top: 21.5rem;
+        left:4rem;
+   }
+}
+@media(max-width:1000px){
+    .nav #auth{
+        top: 21.5rem;
+        left:3rem;
+   }
+}
+@media(max-width:900px){
+    .nav #auth{
+        top: 21.5rem;
+        left:2rem;
+   }
+}
+@media(max-width:800px){
+    .nav #auth{
+        top: 21.5rem;
+        left:1rem;
+   }
+}
+@media(max-width:715px){
+    .nav #auth{
+        top: 21.5rem;
+        left:0rem;
+   }
+}
+@media(max-width:450px){
+    .nav{
+        // max-width: 400px;
+        min-width: 100%;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .nav .title{
+        position: absolute;
+        display: flex !important;
+        margin: 2rem !important;
+        left: -2rem;
+        top: -0.5rem;
+    }
+    
+    .nav .menu{
+        display: flex !important;
+    //    border:1px solid #427cff;
+       position: absolute;
+       right: -1.5rem;
+
+       
+       
+    }   
+    .nav #auth{
+        display: none !important;
+        position: absolute;
+        flex-direction: column !important;
+        top: 7rem;
+    }
+    .nav #auth.open{
+        display: flex !important;
+        text-align: start;
+        margin-top: 20px;
+   }
+    
+
+    
+}
+
+

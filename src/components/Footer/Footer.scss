@@ -1,0 +1,251 @@
+@media (max-width: 1500px) {
+    .footer-line {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer-heading {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        
+        padding: 10rem;
+        // width:fit-content;
+    }
+
+    .real-footer {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .footer-links {
+        .links-colon {
+            width: 30rem !important;
+            justify-content: start;
+            margin: 0;
+            align-items: center;
+            padding: 0;
+
+            h1{
+                margin-right: 7.5rem;
+            }
+        }
+
+    }
+
+    .footer-line {
+        display: none;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap !important;
+        width: fit-content;
+        justify-content: space-around !important;
+        // margin-left: -15rem;
+
+    }
+
+    .models-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        width: 100% !important;
+    }
+}
+
+@media(max-width:915) {
+    .footer-heading {
+        h1 {
+            font-size: 1rem;
+        }
+    }
+
+    .links-colon {
+        width: 300px !important;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+@media(max-width:720){
+    .footer-links{
+        
+    .links-colon{
+        width: 500px !important;
+    }
+}
+    .real-footer{
+        .last-links{
+            margin-left: 5rem !important;
+        }
+    }
+}
+
+.footer-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 3rem;
+    // width: 100%;
+
+    h1 {
+        font-size: 5rem;
+    }
+
+}
+
+.footer-links {
+    margin-left: 5rem;
+
+}
+
+.links-colon {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    h1 {
+        margin-left: 0.8rem;
+        font-weight: 550;
+    }
+
+}
+
+.links-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // flex-wrap: nowrap;
+    width: 15rem;
+    align-items: start;
+    margin-bottom: 10px;
+
+    a {
+        // margin-left: 1rem;
+        padding: 1rem;
+        color: black;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+}
+.mainrow{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links {
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // width: 85%;
+    position: relative;
+    // align-items: center;
+}
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        margin-left: 3rem;
+        width: 35%;
+        padding-bottom: 1rem;
+        align-items: center;
+
+        .models-info {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 40%;
+            margin-top: 2rem;
+            align-items: start;
+
+            h1 {
+                margin-left: 1rem !important;
+                font-weight: 550;
+            }
+
+            a {
+                margin: 1rem;
+                color: black;
+                font-size: 1rem;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+
+// .footer-line {
+//     background-color: black;
+//     transform: rotate(90deg);
+//     height: 2px;
+//     width: 23rem;
+//     position: absolute;
+//     top: 10rem;
+//     right: 32rem;
+// }
+
+.footer-line1 {
+    background-color: black;
+    height: 0.3rem;
+    width: 95%;
+    margin-left: 3rem;
+}
+
+.real-footer {
+    height: 1rem;
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-around;
+    align-items: center;
+
+    .last-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .last-links a {
+        text-decoration: none;
+        margin: 15px;
+        color: black;
+        font-size: 1.3rem;
+    }
+
+    .social-logos a {
+        margin-left: 15px;
+        color: black;
+    }
+
+    .logo-holder {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .logo-holder a {
+        svg {
+            width: 50px;
+            height: 50px;
+            color: black;
+
+        }
+    }
+
+
+}
