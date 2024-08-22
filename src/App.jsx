@@ -1,29 +1,21 @@
-import { useState } from 'react'
-import Nav from './Nav'
-import Home from './components/Home/Home'
-import CurvedTxt from './components/CurvedTxt'
-import Footer from './components/Footer/Footer'
-import { Route, Routes } from 'react-router-dom'
-import ScrollToTop from './ScrollToTop'
-// import Models from './components/Models'
+import { Routes } from "react-router-dom"
+import Home from "./components/Home"
+import Nav from "./Nav"
+import NavMegamenu from "./components/NavMegamenu"
+import FirstPage from "./components/FirstPage"
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
     <>
-      <ScrollToTop/>
-      <Nav/>
-       <Home/>
-      <Routes>
-        
-      </Routes>
-      
-      
-      <Footer/> 
-      
-      
+    <Nav/>
+     <Home/>
     </>
+    
+   
+    
   )
 }
 

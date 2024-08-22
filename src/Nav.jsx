@@ -1,73 +1,82 @@
 import React from 'react'
-import { CiYoutube } from "react-icons/ci";
-import { Link } from 'react-router-dom';
-import { MdKeyboardArrowDown } from 'react-icons/md'
-import ProductsMegamenu from './components/ProductsMegamenu';
 import './Nav.scss'
-import { BsTriangleFill } from 'react-icons/bs';
-import { BiLogoMediumSquare } from 'react-icons/bi';
-import { useState } from 'react';
+import { TbLetterM } from 'react-icons/tb'
+import { Link } from 'react-router-dom'
+import { IoMdArrowDropright } from 'react-icons/io'
+import { useState } from 'react'
+import NavMegamenu from './components/NavMegamenu'
 
 const Nav = () => {
 
     const [menuOpen, setMenuOpen]= useState(false);
-    const [menuOpen2, setMenuOpen2]= useState(false);
+  
+   
     return (
-        <div className="nav">
-
-            <Link className='title' to='/'>
-            <BiLogoMediumSquare /> MODELKOS
-            </Link>
-            <div className='menu' onClick={()=>{
+        <div className='nav'>
+            <div className="nav-content">
+                
+                <div className="nav-logo">
+                    <Link to='/'>
+                        <div className='logo-container'>  <TbLetterM /></div>
+                        <h3>MODELKOS</h3>
+                    </Link>
+                </div>
+                <div className='menu' onClick={()=>{
                 setMenuOpen(!menuOpen);
-                setMenuOpen2(!menuOpen2)
-            }}>
+                
+                 }}>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
-
-           
-            <div id='links' className={menuOpen ? "open" : ""} >
-            <div className="nav-link">
-                    <Link to='/' className='inner-link'>Home</Link>
+                
+                <div id='nav-menu' className={menuOpen ? "open" : ""}>
+                    <div className="nav-link">
+                        <Link to='/'>
+                            Home
+                        </Link>
+                    </div>
+                    <div className="nav-link">
+                        <Link to='/'>
+                            Our Work
+                            <IoMdArrowDropright />
+                        </Link>
+                        <NavMegamenu/>
+                    </div>
+                    <div className="nav-link">
+                        <Link to='/'>
+                            About us
+                            <IoMdArrowDropright />
+                        </Link>
+                    </div>
+                    <div className="nav-link">
+                        <Link to='/'>
+                            Models
+                            <IoMdArrowDropright />
+                        </Link>
+                    </div>
+                    <div className="nav-link">
+                        <Link to='/'>
+                            Academy
+                            <IoMdArrowDropright />
+                        </Link>
+                    </div>
+                    <div className="nav-link">
+                        <Link to='/'>Blog</Link>
+                    </div>
                 </div>
-                <div className="nav-link">
-                    <Link   to='/' className='inner-link'>Products <MdKeyboardArrowDown /></Link>
-                    <BsTriangleFill className='arrow'/>
-                    <ProductsMegamenu />
-                </div>
-
-                <div className="nav-link">
-                    <Link   to='/' className='inner-link'>About <MdKeyboardArrowDown /></Link>
-                    <BsTriangleFill className='arrow'/>
-                    <ProductsMegamenu />
-                </div>
-
-                <div className="nav-link">
-                    <Link   to='/' className='inner-link'>Models <MdKeyboardArrowDown /></Link>
-                    <BsTriangleFill className='arrow'/>
-                    <ProductsMegamenu />
-                </div>
-                <div className="nav-link">
-                    <Link   to='/' className='inner-link'>Academy <MdKeyboardArrowDown /></Link>
-                    <BsTriangleFill className='arrow'/>
-                    <ProductsMegamenu />
-                </div>
-
-                <div className="nav-link">
-                    <Link to='/' className='inner-link'>Blog</Link>
-
+                
+                <div className="nav-auth">
+                    <div className="auth-link">
+                        <Link to='/'>Apply now</Link>
+                    </div>
+                    <div className="auth-link1">
+                        <div className='contacts-div'>
+                            <Link to='/'>Contacts</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
-          
-
-            <div id="auth" className={menuOpen2 ? "open" : ""}>
-                <Link to='/'>Apply now</Link>
-                <Link to='/'  className='sign-up'>Contacts</Link>
-            </div>
-
         </div>
     )
 }
